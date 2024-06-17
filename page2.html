@@ -24,6 +24,18 @@
         crossorigin="anonymous"></script>
     <!-- Script dos next btn -->
     <script src="js/jquery.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "gHawHjLqwjp_Gik1b",
+            });
+        })();
+    </script>
+    <script src="script.js"></script>
 </head>
 <style>
     /* Estilo para a imagem com a classe "imagem-25" ocupar 25% da largura do site */
@@ -1172,8 +1184,8 @@
                                         <form id="meuFormulario" action="index.html" method="post">
                                             <!-- Seus campos de formulário aqui -->
                                             <!-- O botão de enviar -->
-                                            <input type="submit" id="submitBtn" value="Enviar"
-                                                onclick="validarFormularios()" style="
+                                            <button type="submit" id="submitBtn"
+                                                onclick="sendMail()" style="
                                          background-color:rgb(72, 160, 236);
                                   color: white; 
                                   padding: 10px
@@ -1187,7 +1199,9 @@
                                     border: none;
                                     cursor: pointer;
                                     font-weight: bold;
-                                    margin-top: -260px;" </form>
+                                    margin-top: -260px;">Enviar</button>
+                                        
+                                        </form>
 
                                 </div>
                                 </nav>
