@@ -27,7 +27,6 @@
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
             emailjs.init({
@@ -36,6 +35,7 @@
         })();
     </script>
     <script src="script.js"></script>
+
 </head>
 <style>
     /* Estilo para a imagem com a classe "imagem-25" ocupar 25% da largura do site */
@@ -1181,7 +1181,7 @@
 
                                         <!-- <input type="submit" value="Enviar"
                                     style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
-                                        <form id="meuFormulario" action="index.html" method="post">
+                                        
                                             <!-- Seus campos de formulário aqui -->
                                             <!-- O botão de enviar -->
                                             <button type="submit" id="submitBtn"
@@ -1201,7 +1201,7 @@
                                     font-weight: bold;
                                     margin-top: -260px;">Enviar</button>
                                         
-                                        </form>
+                                        
 
                                 </div>
                                 </nav>
@@ -1658,3 +1658,32 @@
     }
 
 </script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Configuração do EmailJS
+        (function() {
+            emailjs.init("gHawHjLqwjp_Gik1b");
+        })();
+
+        // Envio do formulário
+        document.getElementById('turnoForm').addEventListener('submitBtn', function(event) {
+            event.preventDefault();
+
+            // Coletar dados do formulário
+            var templateParams = {
+                name: document.getElementById('manha').value,
+                email: document.getElementById('tarde').value,
+                message: document.getElementById('noite').value
+            };
+
+            // Enviar email
+            emailjs.send('service_s69xwzr', 'template_tvu3aj4', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Email enviado com sucesso!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Ocorreu um erro ao enviar o email.');
+                });
+        });
+    </script>
