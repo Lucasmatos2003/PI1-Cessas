@@ -9,11 +9,16 @@ function getSelectedRadioValue(formName) {
 }
 
 function sendMail() {
+    // const foto = getSelectedRadioValue("documento");
     const turno = getSelectedRadioValue("turno");
     const matricula = getSelectedRadioValue("ensino");
     const dificuldade = getSelectedRadioValue("deficiencia");
     const serie = getSelectedRadioValue("serie");
 
+    // if (!foto) {
+    //     alert("Por favor, tire uma foto do seu documento.");
+    //     return;
+    // }
 
     if (!turno) {
         alert("Por favor, selecione um turno.");
@@ -36,11 +41,12 @@ function sendMail() {
     }
 
     let parms = {
+        // foto: foto,
         turno: turno,
         serie: serie,
         matricula: matricula,
         dificuldade: dificuldade,
-        telefone: document.getElementsByName("telefone").value,
+        telefone: document.getElementById("telefone").value,
 
     };
 
