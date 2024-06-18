@@ -351,7 +351,7 @@
     }
 
     .turnoCenter,
-    .ensinoCenter {
+    .ensinoCenter, .ensinoCenterMd, .ensinoCenterfd1, .ensinoCenterfd2{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -669,6 +669,9 @@
         margin: 0;
         padding: 0;
     }
+    .ensinoCenterfdd1, .ensinoCenterfdd2, .ensinoCentermdd{
+        margin-top: 500px;
+    }
     html{
         width: 100vh;
     }
@@ -713,8 +716,7 @@
         height: auto;            /* Maintain aspect ratio */
     }
     
-    
-
+  
     /* Increase font size in the navbar for better readability on small screens */
     .navbar-nav .nav-link {
         font-size: 18px;         /* Larger font size for navigation links */
@@ -1207,13 +1209,14 @@
                                 </nav>
                                 <nav class="Seriefundamental1"
                                     style="display: none; margin-top: -520px; font-size: 20px;">
+                                    <div class="ensinoCenterfdd1">
                                     <form id="fundamental1Form" method="POST">
                                         <br>
                                         <audio controls>
                                             <source src="audios/fundamental1.mp3" type="audio/mpeg">
                                         </audio>
-                                        <p style="margin-bottom: 10px;">Tipo de ensino:</p>
-                                        <div class="ensinoCenter">
+                                        <p class="tipofs1" style="margin-bottom: 10px;">Tipo de ensino:</p>
+                                        <div class="ensinoCenterfd1">
                                             <div>
                                                 <div class="ensino-container" style="margin-bottom: 0;">
                                                     <input type="radio" id="primeiro1" class="custom-radio-btn"
@@ -1258,16 +1261,18 @@
                                             </div>
                                         </div>
                                     </form>
+                                    </div>
                                 </nav>
 
                                 <nav class="Seriefundamental2" style="display: none; margin-top: -520px;">
+                                    <div class="ensinoCenterfdd2">
                                     <form id="fundamental2Form" method="POST">
                                         <br>
                                         <audio controls>
                                             <source src="audios/fundamental2.mp3" type="audio/mpeg">
                                         </audio>
                                         <p style="margin-bottom: 20px;">Tipo de ensino:</p>
-                                        <div class="ensinoCenter">
+                                        <div class="ensinoCenterfd2">
                                             <div>
                                                 <div class="ensino-container">
                                                     <input type="radio" id="primeiro6" class="custom-radio-btn"
@@ -1300,16 +1305,18 @@
                                             </div>
                                         </div>
                                     </form>
+                                </div>
                                 </nav>
 
                                 <nav class="Seriemedio" style="display: none; margin-top: -520px;">
+                                    <div class="ensinoCentermdd">
                                     <form id="medioForm" method="POST">
                                         <br>
                                         <audio controls>
                                             <source src="audios/ensinomedio.mp3" type="audio/mpeg">
                                         </audio>
                                         <p style="margin-bottom: 20px;">Tipo de ensino:</p>
-                                        <div class="ensinoCenter">
+                                        <div class="ensinoCenterMd">
                                             <div>
                                                 <div class="ensino-container">
                                                     <input type="radio" id="medio1" class="custom-radio-btn"
@@ -1332,6 +1339,7 @@
                                             </div>
                                         </div>
                                     </form>
+                                </div>
                                 </nav>
 
                             </div>
